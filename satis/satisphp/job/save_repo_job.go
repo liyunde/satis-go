@@ -1,8 +1,8 @@
 package job
 
 import (
-	"github.com/benschw/satis-go/satis/satisphp/api"
-	"github.com/benschw/satis-go/satis/satisphp/db"
+	"satis-go/satis/satisphp/api"
+	"satis-go/satis/satisphp/db"
 )
 
 // Add or save a repo tp the repo collection
@@ -10,8 +10,9 @@ func NewSaveRepoJob(dbPath string, repo api.Repo) *SaveRepoJob {
 	return &SaveRepoJob{
 		dbPath:     dbPath,
 		repository: repo,
-		exitChan:   make(chan error, 1),
+		exitChan:   make(chan error, 1), //给channel增加缓冲区 1个 err 长度，然后在程序的最后让主线程休眠一秒
 	}
+	//或是:把ch<-1这一行代码放到子线程代码的后面
 }
 
 type SaveRepoJob struct {

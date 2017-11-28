@@ -2,8 +2,8 @@ package satisphp
 
 import (
 	"errors"
-	"github.com/benschw/satis-go/satis/satisphp/api"
-	"github.com/benschw/satis-go/satis/satisphp/job"
+	"satis-go/satis/satisphp/api"
+	"satis-go/satis/satisphp/job"
 	"log"
 )
 
@@ -58,6 +58,7 @@ func (s *SatisClient) SaveRepo(repo *api.Repo, generate bool) error {
 	// 	Url:  repo.Url,
 	// }
 	j := job.NewSaveRepoJob(s.DbPath, *repo)
+
 	if err := s.performJob(j); err != nil {
 		return err
 	}

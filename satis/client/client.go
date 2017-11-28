@@ -1,7 +1,7 @@
 package client
 
 import (
-	"github.com/benschw/satis-go/satis/satisphp/api"
+	"satis-go/satis/satisphp/api"
 	"log"
 	"net/http"
 )

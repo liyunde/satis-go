@@ -2,10 +2,13 @@ package satis
 
 import (
 	"fmt"
-	"github.com/benschw/satis-go/satis/client"
-	"github.com/benschw/satis-go/satis/satisphp/api"
-	"github.com/benschw/satis-go/satis/satisphp/db"
-	. "gopkg.in/check.v1"
+	//"github.com/benschw/satis-go/satis/client"
+	//"github.com/benschw/satis-go/satis/satisphp/api"
+	//"github.com/benschw/satis-go/satis/satisphp/db"
+	"satis-go/satis/client"
+	"satis-go/satis/satisphp/api"
+	"satis-go/satis/satisphp/db"
+	."gopkg.in/check.v1"
 	"log"
 	"net"
 	"os"

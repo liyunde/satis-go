@@ -2,9 +2,9 @@ package satisphp
 
 import (
 	"fmt"
-	"github.com/benschw/satis-go/satis/satisphp/api"
-	"github.com/benschw/satis-go/satis/satisphp/db"
-	"github.com/benschw/satis-go/satis/satisphp/job"
+	"satis-go/satis/satisphp/api"
+	"satis-go/satis/satisphp/db"
+	"satis-go/satis/satisphp/job"
 	"log"
 	"os"
 	"reflect"

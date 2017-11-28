@@ -4,7 +4,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"github.com/benschw/satis-go/satis"
+	"satis-go/satis"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"log"
@@ -40,7 +40,8 @@ func main() {
 	// Get Arguments
 	var cfgPath string
 
-	flag.StringVar(&cfgPath, "config", "/opt/satis-go/config.yaml", "Path to Config File")
+	//flag.StringVar(&cfgPath, "config", "/opt/satis-go/config.yaml", "Path to Config File")
+	flag.StringVar(&cfgPath, "config", "config-local.yaml", "Path to Config File")
 
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "Usage: %s [arguments] \n", os.Args[0])
@@ -70,7 +71,9 @@ func main() {
 		Homepage:    cfg.Repohost,
 	}
 
-	// Start Server
+    log.Printf("启动... listen --> %s",cfg.Bind)
+
+    // Start Server
 	if err := s.Run(); err != nil {
 		log.Fatal(err)
 	}

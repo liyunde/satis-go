@@ -1,7 +1,8 @@
 package job
 
 import (
-	"github.com/benschw/satis-go/satis/satisphp/db"
+	//"github.com/benschw/satis-go/satis/satisphp/db"
+	"satis-go/satis/satisphp/db"
 )
 
 // Remove a repo from the repo collection
